@@ -2,7 +2,7 @@
   "name": "spid-storage-resource-memory",
   "version": "0.0.1",
   "description": "[Plugin] Spid Memory Resource Storage",
-  "main": "ResourceStorageMemory.js",
+  "main": "MemoryResourceStorage.js",
   "contributors": [
     {
       "name": "Francois-Guillaume Ribreau",
@@ -15,6 +15,14 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "spid-storage-resource-interface": "0.0.4"
+    "spid-storage-resource-interface": "0.0.5"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "lodash": "^2.4.1",
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "mocha test"
   }
 }
