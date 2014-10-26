@@ -1,12 +1,12 @@
 'use strict';
 
-var AssetStorageInterface = require('spid-storage-asset-interface');
+var ResourceStorageInterface = require('spid-storage-resource-interface');
 
-function AssetStorageMemory(){
+function ResourceStorageMemory() {
   this._data = {};
 }
 
-AssetStorageMemory.prototype.init = function (f) {
+ResourceStorageMemory.prototype.init = function (f) {
   f();
 };
 
@@ -14,7 +14,7 @@ AssetStorageMemory.prototype.init = function (f) {
  * [dispose description]
  * @param  {Function} f(err)
  */
-AssetStorageMemory.prototype.dispose = function (f) {
+ResourceStorageMemory.prototype.dispose = function (f) {
   this._data = {};
   f();
 };
@@ -26,7 +26,7 @@ AssetStorageMemory.prototype.dispose = function (f) {
  * @param  {Function} f(err, value), value is null if the `name`
  * @return {[type]}       [description]
  */
-AssetStorageMemory.prototype.read = function (key, f) {
+ResourceStorageMemory.prototype.read = function (key, f) {
   if (!this._data.hasOwnProperty(key)) {
     return f(null, null);
   }
@@ -41,9 +41,9 @@ AssetStorageMemory.prototype.read = function (key, f) {
  * @param  {Function} f(err)
  * @return {[type]}       [description]
  */
-AssetStorageMemory.prototype.write = function (key, value, f) {
+ResourceStorageMemory.prototype.write = function (key, value, f) {
   this._data[key] = value;
   f();
 };
 
-module.exports = AssetStorageInterface.ensureImplements(AssetStorageMemory);
+module.exports = ResourceStorageInterface.ensureImplements(ResourceStorageMemory);

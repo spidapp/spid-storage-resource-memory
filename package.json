@@ -1,11 +1,20 @@
 {
-  "name": "spid-storage-asset-memory",
+  "name": "spid-storage-resource-memory",
   "version": "0.0.1",
-  "description": "[Plugin] Spid Memory Asset Storage",
-  "main": "MemoryAssetStorage.js",
-  "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com/)",
+  "description": "[Plugin] Spid Memory Resource Storage",
+  "main": "ResourceStorageMemory.js",
+  "contributors": [
+    {
+      "name": "Francois-Guillaume Ribreau",
+      "email": "npm@fgribreau.com"
+    },
+    {
+      "name": "Etienne Rouillard",
+      "email": "rouillard.etienne@gmail.com"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
-    "spid-storage-asset-interface": "~0.0.2"
+    "spid-storage-resource-interface": "0.0.4"
   }
 }
