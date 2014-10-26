@@ -1,6 +1,6 @@
 {
   "name": "spid-storage-resource-memory",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "[Plugin] Spid Memory Resource Storage",
   "main": "MemoryResourceStorage.js",
   "contributors": [
